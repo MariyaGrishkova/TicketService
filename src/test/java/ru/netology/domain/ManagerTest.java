@@ -21,7 +21,7 @@ class ManagerTest {
         Ticket[] expected = {new Ticket(2, 1000, "GOR", "LED", 120),
                 new Ticket(3, 850, "GOR", "LED", 125),
                 new Ticket(4, 500, "GOR", "LED", 140)};
-        Ticket[] actual = man.findAll("UUD", "LED");
+        Ticket[] actual = man.findAll("GOR", "LED");
         assertArrayEquals(expected, actual);
     }
 

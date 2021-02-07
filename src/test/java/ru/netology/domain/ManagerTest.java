@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ManagerTest {
     Ticket[] list = {new Ticket(1, 1500, "VVO", "SVO", 540),
             new Ticket(2, 1000, "GOR", "LED", 120),
-            new Ticket(3, 850, "GOR", "LED", 125),
-            new Ticket(4, 500, "GOR", "LED", 140),
+            new Ticket(3, 850, "GOR", "LED", 120),
+            new Ticket(4, 500, "GOR", "LED", 120),
             new Ticket(5, 1250, "DME", "LED", 60)};
     TicketRepo repo = new TicketRepo(list);
     Manager man = new Manager(repo);
@@ -20,8 +20,8 @@ class ManagerTest {
     @Test
     void shouldFindAll() {
         Ticket[] expected = {new Ticket(2, 1000, "GOR", "LED", 120),
-                new Ticket(3, 850, "GOR", "LED", 125),
-                new Ticket(4, 500, "GOR", "LED", 140)};
+                new Ticket(3, 850, "GOR", "LED", 120),
+                new Ticket(4, 500, "GOR", "LED", 120)};
         var actual = man.findAll("GOR", "LED");
         assertArrayEquals(expected, actual);
     }
